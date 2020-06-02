@@ -1,0 +1,19 @@
+{
+  "name": "bikmay-quiz",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "graphql-request": "1.8.2",
+    "node-fetch": "^2.6.0",
+    "telegraf": "^3.38.0"
+  },
+  "devDependencies": {
+    "isomorphic-fetch": "^2.2.1"
+  }
+}
