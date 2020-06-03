@@ -73,6 +73,18 @@ const getResults = `
         correct
     }
   }
+`;
+
+const removeResults = `
+mutation removeResults($user_id: bigint) {
+    delete_quiz_results(where: {user_id: {_eq: $user_id}}){
+        returning {
+        id
+        user_id
+        quiz_answer_id
+        }
+    }
+}
 `
 
 module.exports = {
@@ -83,4 +95,5 @@ module.exports = {
     setQuestuion,
     setAnswer,
     getResults,
+    removeResults,
 }

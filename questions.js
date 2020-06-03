@@ -76,10 +76,22 @@ const answerQuestion = async (userId, index) => {
     } catch(e) {
         console.error(e);
     }
+};
+
+
+const removeResults = async (userId) => {
+    try {
+        await request(API, queries.removeResults, {
+            user_id: userId,
+        })
+    } catch(e) {
+        console.error(e);
+    }
 }
 
 module.exports = {
     getQuestion,
     answerQuestion,
     getResults,
+    removeResults,
 };
