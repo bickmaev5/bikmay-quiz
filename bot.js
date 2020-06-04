@@ -82,7 +82,12 @@ bot.start(async (ctx) => {
 }); 
 
 bot.on('contact', async (ctx) => {
-    const variables = { object: ctx.update.message.contact};
+    const variables = { object: {
+        phone_number: ctx.update.message.contact.phone_number || '',
+        first_name: ctx.update.message.contact.first_name || '',
+        last_name: ctx.update.message.contact.last_name || '',
+        user_id: ctx.update.message.contact.user_id,
+    }};
     const isRegistered = await request(API, queries.isRegistered, {
         user_id: ctx.update.message.from.id,
     });
