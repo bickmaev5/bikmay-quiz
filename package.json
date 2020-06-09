@@ -7,10 +7,12 @@
     "start": "node index.js"
   },
   "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "graphql-request": "1.8.2",
     "node-fetch": "^2.6.0",
+    "request": "^2.88.2",
     "telegraf": "^3.38.0"
   },
   "devDependencies": {
