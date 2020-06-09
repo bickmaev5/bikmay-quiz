@@ -9,5 +9,12 @@ const schedule = async () => {
     }
 }
 
-const s = await schedule();
-console.log(s);
+const main = async () => {
+    const s = await schedule();
+    console.log(s);
+};
+
+
+main();
+
+
